@@ -35,24 +35,20 @@ class User extends React.Component {
     return (
       <div className="mycard">
         <div>
-          <div className="cardinfo">
-            <img src={this.state.gracee.avatar_url}></img>
-            <h3>{this.state.gracee.name}</h3>
-            <h3>{this.state.gracee.location}</h3>
-            <h3>{this.state.gracee.bio}</h3>
-          </div>
+          <img src={this.state.gracee.avatar_url}></img>
+          <h3>{this.state.gracee.name}</h3>
+          <h3>{this.state.gracee.location}</h3>
+          <h3>{this.state.gracee.bio}</h3>
         </div>
 
-        <div className="card">
-          <div className="cardinfo">
-            {this.state.followers.map((follower) => (
-              <div>
-                <img src={follower.avatar_url}></img>
-                <h2>{follower.login}</h2>
-                <h2>{follower.url}</h2>
-              </div>
-            ))}
-          </div>
+        <div className="most">
+          {this.state.followers.map((follower) => (
+            <div className="card">
+              <img src={follower.avatar_url}></img>
+              <h2>{follower.login}</h2>
+              <h2>{follower.url}</h2>
+            </div>
+          ))}
         </div>
       </div>
     );

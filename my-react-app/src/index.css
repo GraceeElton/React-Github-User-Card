@@ -66,6 +66,16 @@ table {
   background-color: rosybrown;
 }
 
+.most {
+  display: flex;
+}
+
+.card {
+  background-color: blue;
+  flex-direction: row;
+  margin: 2%;
+}
+
 img {
   width: 150px;
   height: 150px;
